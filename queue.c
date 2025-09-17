@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define MAX 10
 
-typedef enum {
+typedef enum { //using enum for the sake of uhh...variance
 	FALSE, TRUE
 }Boolean; 
 
@@ -12,7 +12,7 @@ typedef struct node {
 }node, *LL;
 
 typedef struct {
-	LL front;
+	LL front; //points to the first node which 
 	LL rear;
 }Queue;
 
