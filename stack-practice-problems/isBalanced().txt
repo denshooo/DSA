@@ -1,0 +1,47 @@
+we iterate through the string first, we'll use test1[] = '({[]})'
+
+keep in mind we initialized 'char current' with the index of str in our 'for loop'
+
+'char current = str[i]'
+
+for the first iteration, our first index is str[0] which is '('
+
+check if it's an opening bracket thru:
+
+if(isOpeningBracket(current)) 
+
+if it is an opening bracket, we push it to the stack
+
+push(&s, current); //current is holding '(' 
+ _____
+|_____|
+|_____| - our stack now looks like this
+|__(__|
+
+it continues to iterate until our stack looks like this:
+ _____
+|__[__|
+|__{__| - (since the first three characters are open brackets)
+|__(__|
+
+now it reaches to ']' since it's not an opening bracket, it will move on to our 'isClosingBracket()' function
+
+in our function we have to check if the stack is empty (if it is, it means our closing bracket doesn't have an
+opening bracket.)
+
+aka if(isEmpty(*s)==1){return 0};
+
+we pop our last character (which in this case is '[', and compare if it's a match)
+
+aka (isMatching(last, current) == 0){return 0}; //well in this case it checks if it ISN'T a match
+
+where last = '[' and current = ']'
+
+//but since it is a match, another iteration will happen in our 'for loop' until it traverses through the entire string until our stack is empty
+
+if our stack is empty, it will return 1 otherwise 0
+
+
+
+
+
