@@ -68,10 +68,11 @@ the same parent P as node N and node R lies immediately to the right of node N i
 
 Implementation of trees 
 
-- Parent pointer representation
+- Parent pointer representation (cant identify if node is left or right, can only store integers)
 ->array representaiom of trees
-->T[x] = y, if y is the root node
-->
+  -> T[x] = y, if y is the parent of node x.
+  -> T[x] = -1, if x is the root node.
+  -> T[x] = -2, if x is not a node in the tree.
 - list of children 
 
 ->1st element in LL is the leftmost node
@@ -80,4 +81,18 @@ Implementation of trees
 ->each header points to a LL of elements which are nodes
 ->the elements n the list headed by header [x] are the children of node x.
 
+sir gran
 
+binary heaps v similar to bst but diff rules
+
+1. min heap - parent nodes are larger than child nodes
+2. max heap - parent nodes are always smaller than child nodes
+
+array representation
+
+value of parent = (i - 1) / 2
+value of left child = (i x 2) + 1
+value of right child = (i x 2) + 2
+
+BFS - queue
+DFS - preorder, postorder, inorder
