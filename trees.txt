@@ -1,0 +1,83 @@
+tree:
+a tree is a collection of elements (called nodes), one of the nodes is called a root
+hiearchical - structure of nodes (parenthood)
+
+recursive def of a tree
+a node in itself is a tree and in this case, it is also a root.
+
+suppose n is a node and T1, T2, T3,...TN, are all trees with roots N1, N2, N3 respectively. We can create a new tree by making N a parent of nodes N1, N2, N3.
+
+path
+the path from node N1 to Nk is a sequence of nodes in a tree such that Ni is the parent of Ni+1 for 1<= i< k
+
+length of path = number of nodes in the path - 1
+
+path to itself = 0
+
+proper ancestor = an ancestor to a node other than itself
+proper descendant = a descendant to a node other than itself
+
+root is the only node with no proper ancestor
+
+root->node->leaf
+|_______|_____|
+ depth  height
+
+order of nodes
+the children of a node is ordered from left->right
+
+pre order
+
+root of T = 5
+nodes of T1 in pre order
+
+T1 = 0 (root)
+T2 = 6 (root), 3, 1
+T3 = 2 (root), 8
+
+pre order = 5, 0, 6, 3, 1, 2, 8
+
+post order (root is last)
+
+T! = 0 
+T2 = 3, 1, 6
+T3 = 8, 2
+
+post order = 0, 3, 1, 6, 8, 2, 5
+
+Inorder
+
+T1 = 0
+root = 5
+T2 = 3, 6, 1
+T3 = 8, 2
+
+Inorder = 0, 5, 3, 6, 1, 8, 2
+
+ADT Tree Operations
+
+1. Parent(T, N) //returns the parent of the node N in tree T. If N is the root, return NULL;
+2. Leftmost_child(T, N) //returns the leftmost child node of tree T, if node is a leaf return NULL.
+3. Rightmost_sibling(T, N) //returns the right sibling node of tree T, right sibling is the node having 
+the same parent P as node N and node R lies immediately to the right of node N in the ordering of the children of node P.
+4. Label(T, N) //returns the label of node N in Tree t
+5. Create(V, T1, T2, T3, TN) // creates a new root R with label V and gives it i children, which are the nodes of T1, T2, T3, TN in order from left to right
+6. Root(T) // returns the node that is the root of the tree T. This returns null for a null tree.
+7. Initialize(T) //this prepares the tree to be used for the first time
+8. Makenull(T) //this makes the tree T to be an empty tree.
+
+Implementation of trees 
+
+- Parent pointer representation
+->array representaiom of trees
+->T[x] = y, if y is the root node
+->
+- list of children 
+
+->1st element in LL is the leftmost node
+->LL representation of a tree. 
+->uses an array of header cells, indexed by nodes
+->each header points to a LL of elements which are nodes
+->the elements n the list headed by header [x] are the children of node x.
+
+
