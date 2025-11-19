@@ -85,8 +85,8 @@ sir gran
 
 binary heaps v similar to bst but diff rules
 
-1. min heap - parent nodes are larger than child nodes
-2. max heap - parent nodes are always smaller than child nodes
+1. max heap - parent nodes are larger than child nodes
+2. min heap - parent nodes are always smaller than child nodes
 
 array representation
 
